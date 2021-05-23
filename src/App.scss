@@ -1,0 +1,13 @@
+@import "reset-css";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+@import "./variables.scss";
+
+html {
+  font-family: Comfortaa, "sans-serif";
+  font-size: 14px;
+}
+
+body {
+  background: #e5e5e5;
+}

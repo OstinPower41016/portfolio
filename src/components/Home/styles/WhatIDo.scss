@@ -1,0 +1,22 @@
+@import "../../../variables.scss";
+
+.what-i-do {
+  padding-top: $section-indent;
+  &__cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  &__cards-item {
+    flex: 0 0 30%;
+  }
+  &__title {
+    margin: 2rem auto;
+  }
+  &__description {
+    padding: 0 2.1rem;
+  }
+  &__icon {
+    font-size: 3rem;
+  }
+}

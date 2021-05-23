@@ -1,0 +1,59 @@
+@mixin pseudo-field {
+  position: absolute;
+  top: 0;
+  height: 28px;
+  width: 45px;
+  text-align: center;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  line-height: 28px;
+  border-radius: 0.2rem;
+  transition: 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.switch {
+  &__title {
+    color: white;
+  }
+  &__input {
+    display: none;
+  }
+  &__control {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 28px;
+    background: #ccc;
+    vertical-align: middle;
+    margin-left: 0.7rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    &::before {
+      content: attr(data-lang-on);
+      @include pseudo-field;
+      left: 0;
+      background: #fff;
+    }
+    &::after {
+      content: attr(data-lang-off);
+      @include pseudo-field;
+      left: 45px;
+      background: #ccc;
+    }
+  }
+  &__input:checked + &__control::before {
+    content: attr(data-lang-off);
+    left: 45px;
+  }
+  &__input:checked + &__control::after {
+    content: attr(data-lang-on);
+    left: 0px;
+  }
+  &__input:not(:checked) + &__control:hover::after {
+    transform: scale(1.1);
+  }
+  &__input:checked + &__control:hover::after {
+    transform: scale(1.1);
+  }
+}

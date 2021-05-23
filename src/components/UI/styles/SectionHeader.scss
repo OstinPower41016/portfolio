@@ -1,0 +1,20 @@
+.section-header {
+  margin: 0 auto;
+  text-align: center;
+  &__header {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__divider {
+    width: 300px;
+    height: 1px;
+    display: block;
+    background: black;
+    margin: 2rem auto;
+  }
+  &__subtitle {
+    display: inline-block;
+    max-width: 560px;
+    color: rgba($color: #6a6a6a, $alpha: 0.73);
+  }
+}

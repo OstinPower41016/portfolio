@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+@mixin link-underline {
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: -3px;
+  background: #b73b3b;
+  transition: 1s ease;
+}
+
+.navbar {
+  background: white;
+  padding: 1rem 0.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: $index-sticky;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-weight: bold;
+  }
+  &__links {
+    display: flex;
+    user-select: none;
+  }
+  &__link {
+    position: relative;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+    &--active {
+      &::after {
+        @include link-underline;
+        width: 100%;
+        left: 0;
+      }
+    }
+    &::before {
+      @include link-underline;
+      width: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:not(.navbar__link--active):hover::before {
+      width: 100%;
+    }
+  }
+}
