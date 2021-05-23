@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import MainView from "../../components/Home/MainView";
+import MySkills from "../../components/Home/MySkills";
 import MyWorks from "../../components/Home/MyWorks";
 import WhatIDo from "../../components/Home/WhatIDo";
 import NavBar from "../../components/NavBar";
@@ -14,6 +15,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       <NavBar />
       <WhatIDo />
       <MyWorks />
+      <MySkills />
     </>
   );
 };
