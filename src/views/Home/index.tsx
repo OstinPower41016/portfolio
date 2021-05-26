@@ -5,6 +5,7 @@ import MySkills from "../../components/Home/MySkills";
 import MyWorks from "../../components/Home/MyWorks";
 import WhatIDo from "../../components/Home/WhatIDo";
 import NavBar from "../../components/NavBar";
+import Divider from "../../components/UI/Divider";
 
 interface IHomeProps {}
 
@@ -14,8 +15,10 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       <MainView />
       <NavBar />
       <WhatIDo />
-      <MyWorks />
+      <Divider />
       <MySkills />
+      <Divider />
+      <MyWorks />
     </>
   );
 };

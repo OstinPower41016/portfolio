@@ -33,7 +33,8 @@
       content: attr(data-lang-on);
       @include pseudo-field;
       left: 0;
-      background: #fff;
+      background: #45bd1e;
+      color: white;
     }
     &::after {
       content: attr(data-lang-off);

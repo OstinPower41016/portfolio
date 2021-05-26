@@ -14,38 +14,11 @@ const WhatIDo: React.FunctionComponent<IWhatIDoProps> = (props) => {
       <Container>
         <SectionHeader title="That is what i do" />
 
-        <div className="what-i-do__cards-wrapper">
-          <BaseCard className="what-i-do__cards-item">
-            <div className="what-i-do__icon">
-              <HiCode />
-            </div>
-            <h4 className="what-i-do__title">Coding</h4>
-            <p className="what-i-do-description">
-              Planning, model development, competent preparation of the development environment, I
-              write high-quality projects
-            </p>
-          </BaseCard>
-          <BaseCard className="what-i-do__cards-item">
-            <div className="what-i-do__icon">
-              <HiCode />
-            </div>
-            <h4 className="what-i-do__title">Coding</h4>
-            <p className="what-i-do-description">
-              Planning, model development, competent preparation of the development environment, I
-              write high-quality projects
-            </p>
-          </BaseCard>
-          <BaseCard className="what-i-do__cards-item">
-            <div className="what-i-do__icon">
-              <HiCode />
-            </div>
-            <h4 className="what-i-do__title">Coding</h4>
-            <p className="what-i-do-description">
-              Planning, model development, competent preparation of the development environment, I
-              write high-quality projects
-            </p>
-          </BaseCard>
-        </div>
+        <p className="what-i-do__text-content">
+          Create websites from scratch using modern technologies and innovation in the field of the
+          web. Revision of the existing code and introduction of new features. Components based code
+          that allows you to maintain it for a long time and maintainability
+        </p>
       </Container>
     </section>
   );

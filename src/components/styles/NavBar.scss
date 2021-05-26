@@ -10,14 +10,13 @@
 }
 
 .navbar {
-  background: white;
+  background: #e4dede;
   padding: 1rem 0.5rem;
   position: sticky;
   top: 0;
   left: 0;
   z-index: $index-sticky;
-  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-
+  box-shadow: 0 4px 4px rgb(226 215 215 / 25%);
   &__wrapper {
     display: flex;
     justify-content: space-between;

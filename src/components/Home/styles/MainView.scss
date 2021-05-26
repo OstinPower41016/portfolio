@@ -1,5 +1,6 @@
 .main-view {
-  background: url("../images/background.jpg") no-repeat center/cover;
+  background: url("../images/background2.jpeg") no-repeat center/cover;
+  background-attachment: fixed;
   height: 100vh;
   &__wrapper {
     display: grid;
@@ -9,6 +10,23 @@
     height: 100%;
     align-items: center;
     justify-items: center;
+  }
+  &__status {
+    grid-row-start: 1;
+    align-self: start;
+    margin-top: 3.5rem;
+    color: white;
+    & > span:first-child {
+      margin-right: 5px;
+      color: #df5656;
+    }
+    & > a {
+      margin-top: 5px;
+    }
+  }
+  &__icon-link {
+    transform: translateY(2px);
+    margin-right: 5px;
   }
   &__switch {
     align-self: start;

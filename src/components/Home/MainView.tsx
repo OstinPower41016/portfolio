@@ -5,6 +5,7 @@ import Container from "../layout/container";
 import MainViewSwitch from "./MainViewSwitch";
 import styles from "./styles/MainView.about.module.scss";
 import { GoArrowSmallDown } from "react-icons/go";
+import { AiOutlineLink } from "react-icons/ai";
 
 interface IMainViewProps {}
 
@@ -28,6 +29,14 @@ const MainView: React.FunctionComponent<IMainViewProps> = (props) => {
         <div className="main-view__wrapper">
           <div className="main-view__switch">
             <MainViewSwitch />
+          </div>
+          <div className="main-view__status">
+            <span className="main-view__label-status">Official status: </span>
+            <span>In the search for remote or office work</span>
+            <a href="#">
+              <AiOutlineLink className="main-view__icon-link" />
+              go to contact information
+            </a>
           </div>
           <div className="main-view__about">
             <About />

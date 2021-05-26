@@ -9,5 +9,13 @@ html {
 }
 
 body {
-  background: #e5e5e5;
+  background: #232121;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #1e9ce3;
+  padding-bottom: 0.2rem;
+  color: #1e9ce3;
 }
