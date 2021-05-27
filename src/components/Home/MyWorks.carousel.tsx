@@ -1,13 +1,15 @@
 import * as React from "react";
-import classnames from "classnames";
 import isNumber from "lodash/isNumber";
+import { useDispatch } from "react-redux";
 
 import "./styles/MyWorks.carousel.scss";
+import { setInfo } from "../../store/carousel/carouselSlice";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import MyWorksCarouselInfo from "./MyWorks.carousel.info";
 
 type TSlide = {
   title: string;
-  description: string;
+  stack: string;
   img: string;
   linkToView?: string;
   linkToWatchCode?: string;
@@ -42,7 +44,7 @@ const getTransformSlide = (idx: number, position: number, slidesLength: number) 
 
 const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) => {
   const [position, setPosition] = React.useState(0);
-  const [backdrop, setVisibility] = React.useState(false);
+  const dispatch = useDispatch();
 
   const actionHandler = (direction: "increment" | "decrement") => {
     let newPosition;
@@ -57,41 +59,35 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
     }
   };
 
-  const backdropVisibility = backdrop ? "block" : "none";
-
   return (
-    <div className="carousel">
-      <ul className="carousel__track">
-        {props.slides.map(({ img }, idx) => {
-          return (
-            <li
-              className="carousel__item"
-              key={img}
-              style={getTransformSlide(idx, position, props.slides.length - 1)}
-              onMouseOver={() => setVisibility(true)}
-              onMouseLeave={() => setVisibility(false)}
-            >
-              <img src={img} alt="" className="carousel__img" />
-              <div
-                className="carousel__item-backdrop"
-                style={{ display: backdropVisibility, transition: "1s all ease", opacity: 1 }}
-              >
-                <div className="carousel__item-links">
-                  <a href="http://">View Preview</a>
-                  <a href="http://">View Code</a>
-                </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-      <button className="carousel__action" onClick={() => actionHandler("decrement")}>
-        <BiLeftArrow />
-      </button>
-      <button className="carousel__action" onClick={() => actionHandler("increment")}>
-        <BiRightArrow />
-      </button>
-    </div>
+    <>
+      <div className="carousel">
+        <ul className="carousel__track">
+          {props.slides.map(
+            ({ img, linkToView = "#", linkToWatchCode = "#", stack, title }, idx) => {
+              if (idx === position) {
+                dispatch(setInfo({ linkToView, linkToWatchCode, stack, title }));
+              }
+              return (
+                <li
+                  className="carousel__item"
+                  key={img}
+                  style={getTransformSlide(idx, position, props.slides.length - 1)}
+                >
+                  <img src={img} alt="" className="carousel__img" />
+                </li>
+              );
+            },
+          )}
+        </ul>
+        <button className="carousel__action" onClick={() => actionHandler("decrement")}>
+          <BiLeftArrow />
+        </button>
+        <button className="carousel__action" onClick={() => actionHandler("increment")}>
+          <BiRightArrow />
+        </button>
+      </div>
+    </>
   );
 };
 
