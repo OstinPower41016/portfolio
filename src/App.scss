@@ -3,6 +3,10 @@
 
 @import "./variables.scss";
 
+:root {
+  --backdrop-hidden: none;
+}
+
 html {
   font-family: Comfortaa, "sans-serif";
   font-size: 14px;
@@ -10,6 +14,11 @@ html {
 
 body {
   background: #232121;
+}
+
+button,
+a {
+  cursor: pointer;
 }
 
 a {

@@ -19,6 +19,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       <MySkills />
       <Divider />
       <MyWorks />
+      <Divider />
     </>
   );
 };

@@ -57,23 +57,25 @@
     font-weight: bold;
     margin-top: 25px;
     transform: translateY(-50%);
-    animation: scroll-icon infinite 3s cubic-bezier(0.44, 0.41, 0.72, 0.63) forwards;
+    animation: scroll-icon 3s infinite cubic-bezier(0.44, 0.41, 0.72, 0.63) forwards;
   }
 }
 
 @keyframes scroll-icon {
   from {
     transform: translateY(-50%);
-  }
-  33% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  66% {
-    transform: translateY(0%);
     opacity: 1;
   }
+  50% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  50.1% {
+    transform: translateY(-150%);
+  }
+
   to {
     transform: translateY(-50%);
+    opacity: 1;
   }
 }
