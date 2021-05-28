@@ -1,4 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+interface IactiveSlideInfo {
+  linkToView: string;
+  linkToWatchCode: string;
+  title: string;
+  stack: string;
+}
 
 const carouselSlice = createSlice({
   name: "carousel",
@@ -11,8 +18,8 @@ const carouselSlice = createSlice({
     },
   },
   reducers: {
-    setInfo: (state, payload) => {
-      console.log(payload);
+    setInfo: (state, action: PayloadAction<IactiveSlideInfo>) => {
+      state.activeSlideInfo = action.payload;
     },
   },
 });

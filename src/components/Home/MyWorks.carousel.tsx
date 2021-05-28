@@ -1,10 +1,10 @@
 import * as React from "react";
 import isNumber from "lodash/isNumber";
 import { useDispatch } from "react-redux";
+import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 import "./styles/MyWorks.carousel.scss";
 import { setInfo } from "../../store/carousel/carouselSlice";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import MyWorksCarouselInfo from "./MyWorks.carousel.info";
 
 type TSlide = {
@@ -61,6 +61,7 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
 
   return (
     <>
+      <MyWorksCarouselInfo />
       <div className="carousel">
         <ul className="carousel__track">
           {props.slides.map(

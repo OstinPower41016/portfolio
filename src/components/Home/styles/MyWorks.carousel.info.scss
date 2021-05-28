@@ -1,0 +1,28 @@
+@import "../../../variables.scss";
+
+.carousel {
+  &__info {
+    margin: $section-indent 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1.5rem;
+    &-title {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 20px;
+    }
+    a {
+      display: block;
+      border: none;
+    }
+  }
+}
