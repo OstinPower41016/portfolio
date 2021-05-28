@@ -1,0 +1,15 @@
+.footer {
+  padding: 1.5rem 1rem;
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(2%);
+    & > a {
+      border: none;
+    }
+    & > a:nth-child(2) {
+      margin: 0 1rem;
+    }
+  }
+}
