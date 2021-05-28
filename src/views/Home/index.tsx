@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import Contact from "../../components/Home/Contact";
 import MainView from "../../components/Home/MainView";
 import MySkills from "../../components/Home/MySkills";
 import MyWorks from "../../components/Home/MyWorks";
@@ -20,6 +21,7 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
       <Divider />
       <MyWorks />
       <Divider />
+      <Contact />
     </>
   );
 };
