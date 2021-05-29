@@ -31,6 +31,10 @@
   &__link {
     position: relative;
     cursor: pointer;
+    & > a {
+      color: black;
+      border: none;
+    }
     &:not(:last-child) {
       margin-right: 1.5rem;
     }
