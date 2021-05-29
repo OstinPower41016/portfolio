@@ -24,17 +24,17 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
               </NavLink>
             </li>
             <li className="navbar__link">
-              <NavLink to="/Blog" activeClassName="navbar__link--active">
+              <NavLink to="/blog" activeClassName="navbar__link--active">
                 Blog
               </NavLink>
             </li>
             <li className="navbar__link">
-              <NavLink to="/Services" activeClassName="navbar__link--active">
+              <NavLink to="/services" activeClassName="navbar__link--active">
                 Services
               </NavLink>
             </li>
             <li className="navbar__link">
-              <NavLink to="/Contacts" activeClassName="navbar__link--active">
+              <NavLink to="/contacts" activeClassName="navbar__link--active">
                 Contacs
               </NavLink>
             </li>

@@ -1,11 +1,11 @@
 import * as React from "react";
 
 import "./styles/Footer.scss";
-import Container from "../layout/container";
+import Container from "./layout/container";
 // icons
-import vkIcon from "./images/Footer/VK.svg";
-import facebookIcon from "./images/Footer/Facebook.svg";
-import githubIcon from "./images/Footer/GitHub.svg";
+import vkIcon from "./assets/images/Footer/VK.svg";
+import facebookIcon from "./assets/images/Footer/Facebook.svg";
+import githubIcon from "./assets/images/Footer/GitHub.svg";
 
 interface IFooterProps {}
 
