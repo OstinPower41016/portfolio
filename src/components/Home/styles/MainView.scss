@@ -21,8 +21,9 @@
       color: #df5656;
     }
     & > a {
-      display: block;
       margin-top: 5px;
+      display: block;
+      max-width: 208px;
     }
   }
   &__icon-link {
