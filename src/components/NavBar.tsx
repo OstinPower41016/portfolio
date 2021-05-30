@@ -20,7 +20,7 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
             </li>
             <li className="navbar__link">
               <NavLink to="/about" activeClassName="navbar__link--active">
-                About
+                Resume
               </NavLink>
             </li>
             <li className="navbar__link">

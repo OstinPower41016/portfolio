@@ -2,7 +2,6 @@ import * as React from "react";
 
 import "./styles/ContactsView.scss";
 import Container from "../layout/container";
-import BreadCrumbs from "../BreadCrumbs";
 import BaseCard from "../UI/BaseCard";
 
 interface IContactsViewsProps {}
