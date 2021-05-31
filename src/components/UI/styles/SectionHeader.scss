@@ -5,7 +5,15 @@
     font-size: 2rem;
     font-weight: bold;
     color: #f8eeee;
+    transition: 1s ease;
+    opacity: 0;
+    transform: translateY(100%);
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+
   &__divider {
     width: 300px;
     height: 1px;
@@ -18,5 +26,12 @@
     max-width: 560px;
     color: rgba($color: #aea6a6, $alpha: 0.73);
     font-size: 0.8rem;
+    transition: 1s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

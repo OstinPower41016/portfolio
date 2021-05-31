@@ -1,7 +1,7 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
 
 import "./styles/NavBar.scss";
+import pdfFile from "./assets/resume.pdf";
 import Container from "./layout/container";
 
 interface INavBarProps {}
@@ -14,29 +14,22 @@ const NavBar: React.FunctionComponent<INavBarProps> = (props) => {
           <p className="navbar__logo">Nikolay Larionov</p>
           <ul className="navbar__links">
             <li className="navbar__link">
-              <NavLink to="/" exact activeClassName="navbar__link--active">
-                Home
-              </NavLink>
+              <a href="#home">Home</a>
             </li>
             <li className="navbar__link">
-              <NavLink to="/about" activeClassName="navbar__link--active">
-                Resume
-              </NavLink>
+              <a href="#skills">Skills</a>
             </li>
             <li className="navbar__link">
-              <NavLink to="/blog" activeClassName="navbar__link--active">
-                Blog
-              </NavLink>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+
+            <li className="navbar__link">
+              <a href="#contacts">Contacs</a>
             </li>
             <li className="navbar__link">
-              <NavLink to="/services" activeClassName="navbar__link--active">
-                Services
-              </NavLink>
-            </li>
-            <li className="navbar__link">
-              <NavLink to="/contacts" activeClassName="navbar__link--active">
-                Contacs
-              </NavLink>
+              <a href={pdfFile} style={{ color: "#962525" }} target="_blank">
+                Download Resume
+              </a>
             </li>
           </ul>
         </div>

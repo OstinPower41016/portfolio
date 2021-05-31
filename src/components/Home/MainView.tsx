@@ -24,7 +24,7 @@ const About = () => {
 
 const MainView: React.FunctionComponent<IMainViewProps> = (props) => {
   return (
-    <div className="main-view">
+    <div className="main-view" id="home">
       <Container>
         <div className="main-view__wrapper">
           <div className="main-view__switch">

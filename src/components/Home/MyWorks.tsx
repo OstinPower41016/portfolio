@@ -52,7 +52,7 @@ you go to the link to my third-party resource`;
 
 const MyWorks: React.FunctionComponent<IMyWorksProps> = (props) => {
   return (
-    <section className="my-works">
+    <section className="my-works" id="portfolio">
       <Container>
         <SectionHeader title="Latest works" subtitle={subtitle} />
         <MyWorksCarousel slides={slides} />

@@ -1,9 +1,9 @@
 import * as React from "react";
+import cn from "classnames";
 
 import "./styles/MySkills.scss";
 import Container from "../layout/container";
 import SectionHeader from "../UI/SectionHeader";
-import BaseCard from "../UI/BaseCard";
 //icons
 import Bem from "./images/MySkills/BEM.svg";
 import CSS from "./images/MySkills/css.svg";
@@ -101,8 +101,11 @@ i.e. the top most used and familiar to me, to find out a brief information about
 hover your mouse or click on the elements`;
 
 const MySkills: React.FunctionComponent<IMySkillsProps> = (props) => {
+  const el = React.useRef<HTMLElement>(null);
+  // const a = useRect(el);
+  // console.log(a);
   return (
-    <section className="my-skills">
+    <section className="my-skills" id="skills" ref={el}>
       <Container>
         <SectionHeader title="Core skills" subtitle={subtitle} />
         <div className="my-skills__content">

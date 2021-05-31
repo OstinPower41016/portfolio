@@ -2,6 +2,7 @@
 
 .carousel {
   margin: 0 auto;
+  margin-top: var(--content-indent);
   overflow: hidden;
   position: relative;
   border-radius: 0 0 8px 8px;
@@ -70,5 +71,12 @@
       transform: translate(-100%, -50%);
     }
     transform: translateY(-50%);
+  }
+  //
+  &__info {
+    margin-top: var(--content-indent);
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
   }
 }

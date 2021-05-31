@@ -1,6 +1,8 @@
 import * as React from "react";
+import cn from "classnames";
 
 import "./styles/SectionHeader.scss";
+import useScrollPartialVisibility from "../../hooks/use/ScrollPartialVisibility";
 
 interface ISectionHeaderProps {
   title: string;
@@ -16,11 +18,27 @@ const SectionHeader: React.FunctionComponent<ISectionHeaderProps> = ({
   subtitle = alternateSubtitle,
   children,
 }) => {
+  const el = React.useRef<HTMLElement>(null);
+  const isVisibility = useScrollPartialVisibility(el);
+
   return (
     <div className="section-header">
-      <header className="section-header__header">{title}</header>
+      <header
+        ref={el}
+        className={cn("section-header__header", {
+          "section-header__header--active": isVisibility,
+        })}
+      >
+        {title}
+      </header>
       <span className="section-header__divider"></span>
-      <h3 className="section-header__subtitle">{children ? children : subtitle}</h3>
+      <h3
+        className={cn("section-header__subtitle", {
+          "section-header__subtitle--active": isVisibility,
+        })}
+      >
+        {children ? children : subtitle}
+      </h3>
     </div>
   );
 };

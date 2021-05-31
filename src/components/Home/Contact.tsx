@@ -24,13 +24,13 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
             You can write to me on my mailbox, or use social networks, and other communication
             methods specified in <a href="#">the footer of the site</a>
           </span>
-          <form className="contact__form">
-            <ContactInput type="text" placeholder="Name" />
-            <ContactInput type="email" placeholder="Email" />
-            <ContactTextArea placeholder="Your message..." />
-            <button className="contact__action">Send Form</button>
-          </form>
         </SectionHeader>
+        <form className="contact__form">
+          <ContactInput type="text" placeholder="Name" />
+          <ContactInput type="email" placeholder="Email" />
+          <ContactTextArea placeholder="Your message..." />
+          <button className="contact__action">Send Form</button>
+        </form>
       </Container>
     </section>
   );

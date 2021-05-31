@@ -1,15 +1,24 @@
 .footer {
-  padding: 1.5rem 1rem;
+  text-align: center;
+  color: white;
+  &__header {
+    margin-top: var(--content-indent);
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  &__sub-header {
+    margin: 1.5rem auto;
+    max-width: 300px;
+    line-height: 2rem;
+    font-size: 1.4rem;
+  }
   &__icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(2%);
+    & > a:not(:last-child) {
+      margin-right: 30px;
+    }
     & > a {
       border: none;
     }
-    & > a:nth-child(2) {
-      margin: 0 1rem;
-    }
+    margin-bottom: var(--content-indent);
   }
 }
