@@ -2,12 +2,11 @@ import * as React from "react";
 import isNumber from "lodash/isNumber";
 import { useDispatch } from "react-redux";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 
 import { useAppSelector } from "../../hooks/redux";
 import "./styles/MyWorks.carousel.scss";
 import { setInfo } from "../../store/carousel/carouselSlice";
-// import MyWorksCarouselInfo from "./MyWorks.carousel.info";
-// import { Link } from "react-router-dom";
 
 type TSlide = {
   title: string;
@@ -48,6 +47,7 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
   const [position, setPosition] = React.useState(0);
   const dispatch = useDispatch();
   const title = useAppSelector((state) => state.carousel.activeSlideInfo.title);
+  const { t } = useTranslation();
 
   const actionHandler = (direction: "increment" | "decrement") => {
     let newPosition;
@@ -64,8 +64,7 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
 
   return (
     <>
-      {/* <MyWorksCarouselInfo /> */}
-      <div className="carousel">
+      <div className="carousel" data-animation="carousel__zoom">
         <ul className="carousel__track">
           {props.slides.map(
             ({ img, linkToView = "#", linkToWatchCode = "#", stack, title }, idx) => {
@@ -91,8 +90,9 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
           <BiRightArrow />
         </button>
       </div>
-      {/*  */}
-      <div className="carousel__info">{title} - Homepage</div>
+      <div className="carousel__info" data-animation="carousel__info-visibility">
+        {title} - {t("portfolio.homepage")}
+      </div>
     </>
   );
 };

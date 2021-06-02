@@ -2,9 +2,10 @@
   background: url("../images/background2.jpeg") no-repeat center/cover;
   background-attachment: fixed;
   height: 100vh;
+  overflow: hidden;
   &__wrapper {
     display: grid;
-    grid-template-columns: auto repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
     height: 100%;
@@ -13,17 +14,44 @@
   }
   &__status {
     grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: start;
     align-self: start;
     margin-top: 3.5rem;
     color: white;
-    & > span:first-child {
+    transform: translateX(-200%);
+    animation: translateToVisible 1s forwards;
+
+    & > div > span:first-child {
       margin-right: 5px;
       color: #df5656;
     }
+    & > div > span:last-child {
+      white-space: nowrap;
+    }
     & > a {
       margin-top: 5px;
-      display: block;
-      max-width: 208px;
+      display: inline-block;
+    }
+    @media (max-width: 992px) {
+      max-width: 50vh;
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+
+      & > a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        display: inline-block;
+      }
+    }
+    @media (max-width: 768px) {
+      max-width: 50vh;
+      line-height: 1.2rem;
+      & > a {
+        margin-top: 2px;
+        font-size: 0.85rem;
+      }
     }
   }
   &__icon-link {
@@ -32,8 +60,16 @@
   }
   &__switch {
     align-self: start;
+    justify-self: end;
     grid-column-start: 3;
     margin-top: 3rem;
+    margin-right: 3rem;
+    transform: translateX(200%);
+    animation: translateToVisible 1s forwards;
+    @media (max-width: 992px) {
+      margin-top: 3.5rem;
+      margin-right: 1rem;
+    }
   }
   &__about {
     grid-column-start: 1;
@@ -52,6 +88,10 @@
     text-align: center;
     align-self: end;
     margin-bottom: 3rem;
+    @media (max-width: 992px) {
+      width: 40px;
+      height: 40px;
+    }
   }
   &__icon {
     color: white;
@@ -60,6 +100,9 @@
     margin-top: 25px;
     transform: translateY(-50%);
     animation: scroll-icon 3s infinite cubic-bezier(0.44, 0.41, 0.72, 0.63) forwards;
+    @media (max-width: 992px) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -79,5 +122,11 @@
   to {
     transform: translateY(-50%);
     opacity: 1;
+  }
+}
+
+@keyframes translateToVisible {
+  to {
+    transform: translateX(0);
   }
 }

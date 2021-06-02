@@ -1,5 +1,4 @@
 import * as React from "react";
-import cn from "classnames";
 
 import "./styles/SectionHeader.scss";
 
@@ -17,29 +16,13 @@ const SectionHeader: React.FunctionComponent<ISectionHeaderProps> = ({
   subtitle = alternateSubtitle,
   children,
 }) => {
-  const el = React.useRef<HTMLElement>(null);
-  // const isVisibility = useScrollPartialVisibility(el);
-
   return (
     <div className="section-header">
-      <header
-        ref={el}
-        className={cn("section-header__header", {
-          // "section-header__header--active": isVisibility,
-        })}
-        data-animation="on"
-        data-active-anim-class="section-header__header--active"
-      >
+      <header className="section-header__header" data-animation="section-header__header--active">
         {title}
       </header>
       <span className="section-header__divider"></span>
-      <h3
-        className={cn("section-header__subtitle", {
-          // "section-header__subtitle--active": isVisibility,
-        })}
-        data-animation="on"
-        data-active-anim-class="section-header__subtitle--active"
-      >
+      <h3 className="section-header__subtitle" data-animation="section-header__subtitle--active">
         {children ? children : subtitle}
       </h3>
     </div>

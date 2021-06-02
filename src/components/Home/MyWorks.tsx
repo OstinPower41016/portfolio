@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 
 import "./styles/MyWorks.scss";
 import Container from "../layout/container";
@@ -47,14 +48,13 @@ const slides = [
 
 interface IMyWorksProps {}
 
-const subtitle = `Works that are not protected by confidentiality, clicking on the work
-you go to the link to my third-party resource`;
-
 const MyWorks: React.FunctionComponent<IMyWorksProps> = (props) => {
+  const { t } = useTranslation();
+
   return (
     <section className="my-works" id="portfolio">
       <Container>
-        <SectionHeader title="Latest works" subtitle={subtitle} />
+        <SectionHeader title={t("portfolio.title")} subtitle={t("portfolio.subtitle")} />
         <MyWorksCarousel slides={slides} />
       </Container>
     </section>

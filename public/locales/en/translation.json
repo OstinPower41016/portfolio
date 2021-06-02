@@ -1,0 +1,63 @@
+{
+  "language": "Language",
+  "status": {
+    "title": "Official status",
+    "description": "In the search for remote or office work",
+    "link-to-contact": "go to contact information"
+  },
+
+  "about": {
+    "subheader1": "Hi, My name is Nikolay",
+    "header": "I’m a web-developer",
+    "subheader2": "creating modern and responsive Web Application"
+  },
+
+  "navbar": {
+    "logo": "Nikolay Larionov",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts",
+    "download_resume": "Download Resume.pdf"
+  },
+
+  "whatIDo": {
+    "title": "That is what i do",
+    "description": "Create websites from scratch using modern technologies and innovation in the field of the web.Revision of the existing code and introduction of new features. Components based code that allows you to maintain it for a long time and maintainability",
+    "subtitle": "A little bit of what I do on weekdays, the range of my work at the moment"
+  },
+
+  "skills": {
+    "title": "Core skills",
+    "subtitle": "Here are the technologies that I am familiar with, in descending order, i.e. the top most used and familiar to me, to find out a brief information about the technology, hover your mouse or click on the elements"
+  },
+
+  "portfolio": {
+    "homepage": "Homepage",
+    "title": "Latest works",
+    "subtitle": "Works that are not protected by confidentiality, clicking on the work you go to the link to my third-party resource"
+  },
+
+  "quote": {
+    "text": "Most good programmers do their work not because they expect to be paid or recognized, but because they enjoy programming.",
+    "author": "Linus Torvalds"
+  },
+
+  "contacts": {
+    "title": "Drop me a line",
+    "subtitle": "You can write to me on my mailbox, or use social networks",
+    "submit-form-text": "Send Form",
+    "placeholderName": "Name",
+    "placeholderEmail": "Email",
+    "placeholderTextArea": "Your message...",
+    "or": "or",
+    "write-on-vk": "Write to me on Vk",
+    "find-on-telegram": "Find me on Telegram",
+    "write-on-whatsapp": "Write to me on Whatsapp",
+    "find-on-github": "Find me on GitHub"
+  },
+
+  "footer": {
+    "thanks": "Thanks for watching !",
+    "copyright": "Copyright 2020 - 2021 Nikolay Larionov, All Right Reversed"
+  }
+}

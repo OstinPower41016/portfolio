@@ -1,8 +1,6 @@
-@import "../../../variables.scss";
-
 .carousel {
   &__info {
-    margin: $section-indent 0 0;
+    margin: var(--section-indent) 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

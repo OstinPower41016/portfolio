@@ -10,7 +10,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <MainRouter />
+      <React.Suspense fallback="loading">
+        <MainRouter />
+      </React.Suspense>
     </BrowserRouter>
   );
 }

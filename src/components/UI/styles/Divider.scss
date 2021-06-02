@@ -4,6 +4,6 @@
   background: #fffbfb;
   height: 1px;
   &__mt {
-    margin-top: 5rem;
+    margin-top: var(--section-indent);
   }
 }

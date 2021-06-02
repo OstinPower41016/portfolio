@@ -1,24 +1,40 @@
 .footer {
-  text-align: center;
   color: white;
-  &__header {
-    margin-top: var(--content-indent);
-    font-weight: bold;
-    font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1rem;
+
+  &__txt {
+    font-size: 1.2rem;
+    display: inline;
+    margin-right: 1rem;
   }
-  &__sub-header {
-    margin: 1.5rem auto;
-    max-width: 300px;
-    line-height: 2rem;
-    font-size: 1.4rem;
+  &__icon {
+    display: inline-block;
+    animation: pulse-heart 1s infinite forwards;
+
+    transition: 5s ease;
+
+    & > svg > path {
+      fill: transparent;
+    }
   }
-  &__icons {
-    & > a:not(:last-child) {
-      margin-right: 30px;
-    }
-    & > a {
-      border: none;
-    }
-    margin-bottom: var(--content-indent);
+  &__copyright {
+    margin: 1.5rem 0;
+  }
+}
+
+.like {
+  & > svg > path {
+    transition: 5s ease;
+    fill: #d61d1d;
+  }
+}
+
+@keyframes pulse-heart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }

@@ -1,5 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
+import { useTranslation } from "react-i18next";
 
 import "./styles/MySkills.scss";
 import Container from "../layout/container";
@@ -96,22 +97,25 @@ const technology = [
 
 interface IMySkillsProps {}
 
-const subtitle = `Here are the technologies that I am familiar with, in descending order, 
-i.e. the top most used and familiar to me, to find out a brief information about the technology, 
-hover your mouse or click on the elements`;
 
 const MySkills: React.FunctionComponent<IMySkillsProps> = (props) => {
   const el = React.useRef<HTMLElement>(null);
-  // const a = useRect(el);
-  // console.log(a);
+  const {t} = useTranslation();
+
+
   return (
     <section className="my-skills" id="skills" ref={el}>
       <Container>
-        <SectionHeader title="Core skills" subtitle={subtitle} />
+        <SectionHeader title={t('skills.title')} subtitle={t('skills.subtitle')} />
         <div className="my-skills__content">
           {technology.map(({ icon, name, title }, idx) => {
             return (
-              <div className="my-skills__item" key={name} title={title}>
+              <div
+                className="my-skills__item"
+                key={name}
+                title={title}
+                data-animation="my-skills__item-visible"
+              >
                 <div>
                   <img src={icon} alt={name} className="my-skills__img" />
                 </div>

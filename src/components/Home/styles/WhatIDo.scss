@@ -1,17 +1,17 @@
-@import "../../../variables.scss";
-
 .what-i-do {
-  padding-top: $section-indent;
+  padding-top: var(--section-indent);
   &__text-content {
-    color: $text-color;
+    color: white;
     max-width: 742px;
     text-align: center;
-    margin: $content-indent auto 0;
+    margin: var(--content-indent) auto 0;
     position: relative;
-    font-size: 1.3rem;
+    font-size: var(--font-size-content);
     letter-spacing: 1px;
     padding: 1.5rem;
+    opacity: 0;
     line-height: 128%;
+    transition: 7s ease;
     &::before {
       content: url("../images/WhatIDo/corner.png");
       position: absolute;
@@ -25,5 +25,11 @@
       right: 0;
       transform: rotate(180deg);
     }
+    @media (max-width: 992px) {
+      max-width: 560px;
+    }
+  }
+  &__text-content-anim {
+    opacity: 1;
   }
 }

@@ -1,38 +1,25 @@
 import * as React from "react";
+import { FcLike } from "react-icons/fc";
+import { useTranslation } from "react-i18next";
 
 import "./styles/Footer.scss";
 import Container from "./layout/container";
 // icons
-import vkIcon from "./assets/images/Footer/Vk.png";
-import telegramIcon from "./assets/images/Footer/Telegram.png";
-import githubIcon from "./assets/images/Footer/Github.png";
-import whatsUpIcon from "./assets/images/Footer/Whats-up.png";
 
 interface IFooterProps {}
 
 const Footer: React.FunctionComponent<IFooterProps> = (props) => {
-  return (
-    <footer className="footer" id="contacts">
-      <Container>
-        <div className="footer__contacts">
-          <h3 className="footer__header">Contacts</h3>
-          <p className="footer__sub-header">Want to know more or just chat? </p>
-          <div className="footer__icons">
-            <a href="#">
-              <img src={telegramIcon} alt="" />
-            </a>
-            <a href="#">
-              <img src={whatsUpIcon} alt="" />
-            </a>
-            <a href="#">
-              <img src={vkIcon} alt="" />
-            </a>
+  const { t } = useTranslation();
 
-            <a href="#">
-              <img src={githubIcon} alt="" />
-            </a>
-          </div>
-          <p className="footer__sub-header">You are welcome!</p>
+  return (
+    <footer className="footer">
+      <Container>
+        <h4 className="footer__txt">{t("footer.thanks")}</h4>
+        <span className="footer__icon" data-animation="like">
+          <FcLike />
+        </span>
+        <div className="footer__copyright">
+          <small>&copy; {t("footer.copyright")}</small>
         </div>
       </Container>
     </footer>

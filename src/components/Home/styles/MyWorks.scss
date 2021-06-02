@@ -1,5 +1,3 @@
-@import "../../../variables.scss";
-
 .my-works {
-  margin-top: $section-indent;
+  padding-top: var(--section-indent);
 }

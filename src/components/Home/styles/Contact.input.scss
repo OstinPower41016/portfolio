@@ -1,24 +1,21 @@
-@mixin styled-input {
-  border: 1px solid white;
-  width: 100%;
-  padding: 1rem 1.5rem;
-  border-radius: 0.7rem;
+@mixin input {
   background: transparent;
+  border: 1px solid white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  width: 100%;
   outline: none;
+  margin-bottom: 2rem;
   color: white;
 }
 
 .contact {
   &__input {
-    @include styled-input;
-    &:not(:first-child) {
-      margin-top: 1.5rem;
-    }
+    @include input;
   }
   &__textarea {
-    @include styled-input;
-    height: 7rem;
+    @include input;
     resize: none;
-    margin-top: 1.5rem;
+    min-height: 120px;
   }
 }
