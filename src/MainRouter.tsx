@@ -17,7 +17,7 @@ const MainRouter: React.FunctionComponent<IMainRouterProps> = (props) => {
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>
-      <Divider />
+      <Divider margin0 />
       <Footer />
     </>
   );

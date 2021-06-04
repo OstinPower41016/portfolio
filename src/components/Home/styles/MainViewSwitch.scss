@@ -95,8 +95,14 @@ span {
   }
   &__input:not(:checked) + &__control:hover::after {
     transform: scale(1.1);
+    @media (max-width: 1200px) {
+      transform: initial;
+    }
   }
   &__input:checked + &__control:hover::after {
     transform: scale(1.1);
+    @media (max-width: 1200px) {
+      transform: initial;
+    }
   }
 }

@@ -54,7 +54,8 @@
     "write-on-vk": "Написать мне в Вк",
     "find-on-telegram": "Найти меня в Telegram",
     "write-on-whatsapp": "Написать мне в Whatsapp",
-    "find-on-github": "Найти меня на GitHub"
+    "find-on-github": "Найти меня на GitHub",
+    "disabled-submit-form": "Извините, связаться со мной данным способом пока невозможно"
   },
 
   "footer": {

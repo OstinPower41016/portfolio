@@ -54,7 +54,8 @@
     "write-on-vk": "Write to me on Vk",
     "find-on-telegram": "Find me on Telegram",
     "write-on-whatsapp": "Write to me on Whatsapp",
-    "find-on-github": "Find me on GitHub"
+    "find-on-github": "Find me on GitHub",
+    "disabled-submit-form": "Sorry, it is not yet possible to contact me using this method"
   },
 
   "footer": {

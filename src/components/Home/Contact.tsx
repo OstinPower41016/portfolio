@@ -33,7 +33,9 @@ const Contact: React.FunctionComponent<IContactProps> = (props) => {
             <ContactInput type="text" placeholder={t("contacts.placeholderName")} />
             <ContactInput type="email" placeholder={t("contacts.placeholderEmail")} />
             <ContactTextArea placeholder={t("contacts.placeholderTextArea")} />
-            <button className="contact__action">{t("contacts.submit-form-text")}</button>
+            <button className="contact__action" disabled title={t("contacts.disabled-submit-form")}>
+              {t("contacts.submit-form-text")}
+            </button>
           </form>
           <span className="contact__or">{t("contacts.or")}</span>
           <div className="contact__social">
