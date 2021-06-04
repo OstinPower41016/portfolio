@@ -15,6 +15,17 @@
     flex: 0 0 25%;
     padding: 1rem 2rem;
     transition: 1s ease;
+    @media (max-width: 500px) {
+      padding: 0.5rem 1rem;
+      flex: 0 0 30%;
+      border-radius: 4px;
+      margin-top: 2.5rem;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+    }
 
     &:nth-child(even) {
       transform: translateX(-1000%);
@@ -22,12 +33,10 @@
     &:nth-child(odd) {
       transform: translateX(1000%);
     }
-    &:nth-child(5),
-    :nth-child(6),
-    :nth-child(7),
-    :nth-child(8) {
-      margin: 5rem 0;
+    &:not(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
+      margin-top: 5rem;
     }
+
     &-title {
       color: white;
       margin-top: 2rem;
@@ -40,8 +49,13 @@
       & > p {
         color: black;
       }
-      & > img {
-        color: black;
+
+      @media (max-width: 500px) {
+        background: transparent;
+        transform: none;
+        & > p {
+          color: white;
+        }
       }
     }
     &-visible {
@@ -57,6 +71,9 @@
     height: 50px;
     @media (max-width: 992px) {
       width: 60px;
+    }
+    @media (max-width: 500px) {
+      width: 40px;
     }
   }
 }

@@ -18,6 +18,9 @@
     --section-indent: 3rem;
     --content-indent: 2rem;
   }
+  @media (max-width: 430px) {
+    --font-size-content: 1.2rem;
+  }
 }
 
 * {
@@ -36,6 +39,9 @@ html {
   }
   @media (max-width: 768px) {
     font-size: 11px;
+  }
+  @media (max-width: 576px) {
+    font-size: 10px;
   }
 }
 

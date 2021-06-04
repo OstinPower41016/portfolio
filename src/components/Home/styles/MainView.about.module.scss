@@ -18,6 +18,9 @@
     @media (max-width: 768px) {
       font-size: 1.2rem;
     }
+    @media (max-width: 430px) {
+      font-size: 1.1rem;
+    }
   }
   &__header {
     font-size: 2.5rem;
@@ -34,11 +37,15 @@
     @media (max-width: 992px) {
       font-size: 2rem;
     }
+    @media (max-width: 430px) {
+      font-size: 1.7rem;
+      line-height: 3.5rem;
+    }
   }
   &__background {
     position: absolute;
-    width: calc(100% + 3%);
-    height: calc(100% + 3%);
+    width: calc(100% + 5%);
+    height: calc(100% + 20%);
     background: rgba($color: #000000, $alpha: 0.2);
     border-radius: 8px;
     padding: 1rem;

@@ -1,20 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface IactiveSlideInfo {
-  linkToView: string;
-  linkToWatchCode: string;
   title: string;
-  stack: string;
+  link: string;
 }
 
 const carouselSlice = createSlice({
   name: "carousel",
   initialState: {
     activeSlideInfo: {
-      linkToView: "#",
-      linkToWatchCode: "#",
       title: "",
-      stack: "",
+      link: "",
     },
   },
   reducers: {

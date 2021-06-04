@@ -1,19 +1,15 @@
 import * as React from "react";
 import isNumber from "lodash/isNumber";
-import { useDispatch } from "react-redux";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
 
 import { useAppSelector } from "../../hooks/redux";
 import "./styles/MyWorks.carousel.scss";
-import { setInfo } from "../../store/carousel/carouselSlice";
 
 type TSlide = {
   title: string;
-  stack: string;
   img: string;
-  linkToView?: string;
-  linkToWatchCode?: string;
+  link: string;
 };
 
 interface IMyWorksCarouselProps {
@@ -45,8 +41,6 @@ const getTransformSlide = (idx: number, position: number, slidesLength: number) 
 
 const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) => {
   const [position, setPosition] = React.useState(0);
-  const dispatch = useDispatch();
-  const title = useAppSelector((state) => state.carousel.activeSlideInfo.title);
   const { t } = useTranslation();
 
   const actionHandler = (direction: "increment" | "decrement") => {
@@ -66,22 +60,17 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
     <>
       <div className="carousel" data-animation="carousel__zoom">
         <ul className="carousel__track">
-          {props.slides.map(
-            ({ img, linkToView = "#", linkToWatchCode = "#", stack, title }, idx) => {
-              if (idx === position) {
-                dispatch(setInfo({ linkToView, linkToWatchCode, stack, title }));
-              }
-              return (
-                <li
-                  className="carousel__item"
-                  key={img}
-                  style={getTransformSlide(idx, position, props.slides.length - 1)}
-                >
-                  <img src={img} alt="" className="carousel__img" />
-                </li>
-              );
-            },
-          )}
+          {props.slides.map(({ img }, idx) => {
+            return (
+              <li
+                className="carousel__item"
+                key={img}
+                style={getTransformSlide(idx, position, props.slides.length - 1)}
+              >
+                <img src={img} alt="" className="carousel__img" />
+              </li>
+            );
+          })}
         </ul>
         <button className="carousel__action" onClick={() => actionHandler("decrement")}>
           <BiLeftArrow />
@@ -90,9 +79,14 @@ const MyWorksCarousel: React.FunctionComponent<IMyWorksCarouselProps> = (props) 
           <BiRightArrow />
         </button>
       </div>
-      <div className="carousel__info" data-animation="carousel__info-visibility">
-        {title} - {t("portfolio.homepage")}
-      </div>
+      <a
+        href={props.slides[position].link}
+        className="carousel__info"
+        data-animation="carousel__info-visibility"
+        target="_blank"
+      >
+        {props.slides[position].title} - {t("portfolio.homepage")}
+      </a>
     </>
   );
 };

@@ -22,6 +22,9 @@
     text-shadow: 0 4px 4px #6d6767;
     display: inline-block;
     text-align: center;
+    @media (max-width: 500px) {
+      font-size: 1.3rem;
+    }
   }
   &__author {
     position: absolute;
@@ -37,6 +40,10 @@
     @media (max-width: 768px) {
       bottom: 20px;
       right: 45px;
+    }
+    @media (max-width: 500px) {
+      font-size: 1.3rem;
+      right: 25px;
     }
   }
 }

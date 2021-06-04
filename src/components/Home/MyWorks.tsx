@@ -6,43 +6,31 @@ import Container from "../layout/container";
 import SectionHeader from "../UI/SectionHeader";
 import MyWorksCarousel from "./MyWorks.carousel";
 // slides-img
-import first from "./images/MyWorks/1.jpg";
-import second from "./images/MyWorks/2.jpg";
-import third from "./images/MyWorks/3.jpg";
-import fourth from "./images/MyWorks/pulse.png";
-import fifth from "./images/MyWorks/uber.jpg";
-import sixth from "./images/MyWorks/6.jpg";
+import picture from "./images/MyWorks/picture.jpg";
+import irvas_window from "./images/MyWorks/irvas_window.jpg";
+import pulse from "./images/MyWorks/pulse.png";
+import uber from "./images/MyWorks/uber.jpg";
 
 const slides = [
   {
-    img: first,
-    title: "Web-site about air ballons 1",
-    stack: "this is a web-site wrote on jquery framework 1",
+    img: picture,
+    title: "Picture.art",
+    link: "https://ostinpower41016.github.io/ostinpower41016.pictute_project.github.io/",
   },
   {
-    img: second,
-    title: "Web-site about air ballons 2",
-    stack: "this is a web-site wrote on jquery framework 2",
+    img: irvas_window,
+    title: "Irvas windows",
+    link: "https://ostinpower41016.github.io/ostinpower41016.window_project.github.io/",
   },
   {
-    img: third,
-    title: "Web-site about air ballons 3",
-    stack: "this is a web-site wrote on jquery framework 3",
+    img: pulse,
+    title: "RunSmart",
+    link: "https://ostinpower41016.github.io/ostinpower41016.github.io.pulse/",
   },
   {
-    img: fourth,
-    title: "Web-site about air ballons 4",
-    stack: "this is a web-site wrote on jquery framework 4",
-  },
-  {
-    img: fifth,
-    title: "Web-site about air ballons 5",
-    stack: "this is a web-site wrote on jquery framework 5",
-  },
-  {
-    img: sixth,
-    title: "Web-site about air ballons 6",
-    stack: "this is a web-site wrote on jquery framework 6",
+    img: uber,
+    title: "Uber",
+    link: "https://ostinpower41016.github.io/ostinpower41016.uber_project.github.io/",
   },
 ];
 
@@ -50,7 +38,6 @@ interface IMyWorksProps {}
 
 const MyWorks: React.FunctionComponent<IMyWorksProps> = (props) => {
   const { t } = useTranslation();
-
   return (
     <section className="my-works" id="portfolio">
       <Container>
