@@ -1,1 +1,1 @@
-[](https://ostinpower41016.github.io/portfolio/)
+https://ostinpower41016.github.io/portfolio/
